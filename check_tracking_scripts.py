@@ -72,6 +72,7 @@ else:
         results.append(process_host(item))
 print ("Proccessing time: "+str(datetime.datetime.now() - start_processing_time))
 
+results=filter(lambda x: x,results)
 result_file=open('results.json','w')
 result_file.write(json.dumps(results, sort_keys=True, indent=2))
 result_file.close()
