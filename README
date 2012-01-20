@@ -1,0 +1,10 @@
+The project is a solution to spider.io prepared interview questions (see https://docs.google.com/viewer?url=http%3A%2F%2Fspider.io%2Fwp-content%2Fuploads%2F2011%2F11%2Fquestions.pdf)
+
+Basically it is a script which finds tracking scripts in a list of top ranked web hosts. It does the following:
+- Download the ghostery list in json (I found the URL for this from looking at the Firefox plugin code).
+- Compile all the regexes that ghostery uses.
+- Download Alexa’s top million list and unzip it.
+- Optionally start a variable number of sub-processes to do the next step
+- For each of the 100k hosts: download the page and match the regexes
+- Write the results to a file in json form
+
